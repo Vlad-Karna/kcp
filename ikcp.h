@@ -387,6 +387,9 @@ int ikcp_setmtu(ikcpcb *kcp, int mtu);
 // set maximum window size: sndwnd=32, rcvwnd=32 by default
 int ikcp_wndsize(ikcpcb *kcp, int sndwnd, int rcvwnd);
 
+// get max fragment size
+int ikcp_maxfrag(ikcpcb *kcp);
+
 // get how many packet is waiting to be sent
 int ikcp_waitsnd(const ikcpcb *kcp);
 

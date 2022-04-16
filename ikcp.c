@@ -1282,6 +1282,11 @@ int ikcp_wndsize(ikcpcb *kcp, int sndwnd, int rcvwnd)
 	return 0;
 }
 
+int ikcp_maxfrag(ikcpcb *kcp)
+{
+	return IKCP_WND_RCV * kcp->mss;
+}
+
 int ikcp_waitsnd(const ikcpcb *kcp)
 {
 	return kcp->nsnd_buf + kcp->nsnd_que;
